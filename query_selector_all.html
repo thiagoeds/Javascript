@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>11 - querySelector (querySelectorAll)</title>
+    </head>
+    <body>
+        <h1 id="titulo">Seja bem vindo(a)</h1>
+
+        <h3 class="subtitulo">Ingredientes</h3>
+
+        <ul class="lista">
+            <li>Ovo</li>
+            <li>Chocolate</li>
+            <li>Manteiga</li>
+            <li>Corante</li>
+        </ul>
+
+        <ol class="lista">
+            <li>Ovo</li>
+            <li>Chocolate</li>
+            <li>Manteiga</li>
+            <li>Corante</li>
+        </ol>
+
+        <h3 class="subtitulo">Modo de Preparo</h3>
+        <p>Faça XYZ, depois ABC</p>
+
+        <p>
+            Nesta aula vamos falar sobre o <b>querySelector</b>, seleciona a primeira opção satisfatoria, exemplo: <b>document.querySelector('.lista');</b>. <br><br>
+
+            Mesmo tendo duas class="lista", ele vai pegar apenas a lista não ordenado, porque é a primeira opção dele. <br>
+
+            <b>ul class="lista" ul</b>
+        </p>
+        
+        <p>
+            Temos também o <b>querySelectorAll</b>, diferente do primeiro que falamos, este vai pegar todos os elementos com a mesma class ou id presentes no meu codigo html, e retorna uma array para que assim eu possa selecionar a opção desejada. <br>
+            Vejamos o exemplo: <br><br>
+
+            <b>document.querySelectorAll('.lista')</b>, no console ele vai retornar todas as opções com a mesma identificação e array do elemento. <br><br>
+
+            <b>NodeList(2) [ul.lista, ol.lista] <br>
+                0: ul.lista <br>
+                1: ol.lista <br>
+                length: 2 <br>
+                __proto__: NodeList</b>
+        </p>
+
+        <script>
+            document.querySelectorAll('.lista')
+        </script>
+
+    </body>
+</html>

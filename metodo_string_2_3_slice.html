@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>2 - Metodo de String 2/3</title>  
+        <style>
+            * {
+                max-width: 1200px;
+            }
+
+            #teste {
+                font-style: unset;
+            }
+        </style>  
+    </head>
+
+    <body>
+        <h1 id="titulo">Seja bem vindo(a)</h1>
+        
+        <h3>O metodo slice</h3>
+        <p>
+            slice() extrai uma parte de uma string e retorna a parte extraída em uma nova string. <br>
+            
+            Então vamos lá! <br><br>
+        </p>
+
+        <h4>1º Exemplo:</h4>
+
+        <p>
+            O método leva 2 parâmetros: a posição inicial e a posição final (final não incluído). <br>
+            Este exemplo corta uma parte de uma string da posição 7 à posição 12 (13-1): <br><br>
+
+            Para isso vamos passar os sequintes parametros: <br><br>
+
+            <b>
+                let frutas = "Maça, Banana, Kiwi"; <br><br>
+                document.getElementById("teste").innerHTML = frutas.slice(6,12);
+            </b>    <br>
+                    // Retornar Banana
+            <br><br>
+            Quero que retorne na frase a seguir a palavra Banana.
+        </p>
+
+        <ul>
+            <li>Fui ao zoologico e vi um gorila comendo <b id="teste"></b>.</li>
+        </ul>
+
+        <h4>2º Exemplo:</h4>
+
+        <p>
+            Usando a String <b>let nome = "Bonieky Lacerda Leal";</b> porém dando agora um comando diferente. 
+            <br><br>
+            <b>
+                let nome = 'Bonieky Lacerda Leal'; <br><br>
+
+                document.getElementById("teste2").innerHTML = nome.slice(16);
+            </b> 
+            <br><br>
+
+            Neste exemplo agora quero saber a partir da posição do caractere <b>16</b> o que esta escrito é... <b id="teste2"></b>.   
+
+        </p>
+
+        <h4>3º Exemplo:</h4>
+
+        <p>
+            Com o Slice é possivel também selecionar a partir de numeros negativos, a diferença é que sera selecionado o conteudo do fim para o inicio, ou seja, a seleção começa do inverso. 
+        </p>
+
+        <p>
+            Veja o exemplo usando a memsma frase.
+        </p>
+
+        <b>
+            let frase = 'Bonieky Lacerda Leal'; <br><br>
+
+            document.getElementById("teste3").innerHTML = frase.slice(-4);
+        </b>
+
+        <p>
+            Diferente do exemplo anterior, neste quero saber quais os ultimos caracteres <b>-4</b>, lembrando que a contagem ficara da seguinte forma <b>-1, -2, -3 e -4, do fim da frase para o inicio</b> <br><br> O que esta escrito é... <b id="teste3"></b>
+        </p>
+
+        <p>
+            Vimos que ele retornou o mesmo resultado nos dois ultimos exemplos, porem escrito de forma diferente, o mesmo pode ser feito do meio da frase para o inicio da mesma.
+        </p>
+
+
+        <script>
+            // Exemplo 1
+
+            let frutas = "Maça, Banana, Kiwi";
+            document.getElementById("teste").innerHTML = frutas.slice(6,12);
+
+            //Exemplo 2
+
+            let nome = 'Bonieky Lacerda Leal';
+
+            document.getElementById("teste2").innerHTML = nome.slice(16);
+
+            //Exemplo 3
+
+            let frase = 'Bonieky Lacerda Leal';
+
+            document.getElementById("teste3").innerHTML = frase.slice(-4);
+        </script>
+
+    </body>
+</html>

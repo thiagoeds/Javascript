@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>2 - Metodo de String 2/3 - Substr</title> 
+        <style>
+            * {
+                max-width: 1200px;
+            }
+
+            #teste {
+                font-style: unset;
+            }
+        </style>   
+    </head>
+
+    <body>
+        <h1 id="titulo">Seja bem vindo(a)</h1>
+        
+        <h3>Método substr</h3>
+        <p>
+            substr()é semelhante a slice(). <br>
+
+            A diferença é que o segundo parâmetro especifica o comprimento da parte extraída, e da mesma forma que o slice() o substr() aceita valores negativos. <br>
+            
+            Então vamos lá! <br><br>
+        </p>
+
+        <h4>1º Exemplo:</h4>
+
+        <p>
+            Para cnseguir entender melhor sua funcionalidade, vou tentar simplificar, usando o explo a seguir, vamos a explicação: <b>Quero iniciar a contagem a partir do 7º caractere e quero extrair ou incluir a informação contida nos proximos 6 caracteres.</b> <br><br>
+            Para isso vamos passar os sequintes parametros: <br><br>
+
+            <b>
+                let frutas = "Maça, Banana, Kiwi"; <br><br>
+                document.getElementById("teste").innerHTML = frutas.substr(7,6);
+            </b>    <br>
+                    // Retornar Banana
+            <br><br>
+            Quero que retorne na frase a seguir a palavra Banana.
+        </p>
+
+        <ul>
+            <li>Fui ao zoologico e vi um gorila comendo... <b id="teste"></b>.</li>
+        </ul>
+
+        <h4>2º Exemplo:</h4>
+
+        <p>
+            Usando a String <b>let nome = "Bonieky Lacerda Leal";</b> porém dando agora um comando diferente. 
+            <br><br>
+            <b>
+                document.getElementById("teste2").innerHTML = resultado.substring(16);
+            </b> 
+            <br><br>
+
+            Neste exemplo agora quero saber a partir da posição do caractere <b>16</b> o que esta escrito é... <b id="teste2"></b>. 
+            
+            <br>
+
+            Caso não colocar nenhuma informação em relação ao caractere que quero ele vai trazer a frase completa... <b id="teste3"></b>
+
+        </p>
+
+
+        <script type="text/javascript" src="./Script/script.js">
+            // Exemplo 1
+
+            let frutas = "Maça, Banana, Kiwi";
+            document.getElementById("teste").innerHTML = frutas.substr(6,6);
+
+            //Exemplo 2
+
+            let nome = 'Bonieky Lacerda Leal';
+
+            document.getElementById("teste2").innerHTML = nome.substring(16);
+
+            let frase = 'Fui ao zoologico e vi um gorila comendo banana.';
+
+            document.getElementById("teste3").innerHTML = frase.substring();
+        </script>
+
+    </body>
+</html>

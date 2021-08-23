@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 - Manipulando Class do elemento 2</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #202020;
+            background: #FFFFFF;
+        }
+
+        /* javascript */
+
+        #exemplo {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .verde {
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="exemplo">Bonieky.</div>
+
+    <button class="verde" onclick="trocar()">Botão</button>
+   
+  
+    <!-- Nunca esqueca de linkar o script no HTML -->
+
+    <script>
+        function trocar() {
+            if(document.querySelector('button').classList.contains('preto')) {
+                document.querySelector('button').classList.remove('preto');
+                document.querySelector('button').classList.add('verde');
+            } else {
+                document.querySelector('button').classList.add('preto');
+                document.querySelector('button').classList.remove('verde');
+            }
+        }
+    </script>
+    
+</body>
+</html>

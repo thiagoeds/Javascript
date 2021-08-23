@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 - Evento de Teclado</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #202020;
+            background: #fff;
+        }
+
+        /* javascript */
+
+        #geral {
+            width: 900px;
+            display: flex;
+            flex-direction: column;
+            margin: 50px auto 0 auto;
+        }
+        
+        input {
+            height: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <section id="geral">
+
+        <h1 id="titulo">Seja bem vindo(a)!</h1>
+
+        <div>
+            
+        <input onkeyup="digitou()" id="campo" type="text" name="usuario" value="Nome do Usuário">
+
+        <input onkeydown="digitando()" id="campo2" type="text" name="usuario" value="e-mail do Usuário">
+
+        <input onkeydown="digitar(event)" id="campo3" type="text" name="usuario" value="Logradouro">
+
+        <input onkeydown="confirmar(event)" id="campo4" type="text" name="usuario" value="Cidade">
+
+        <input onkeydown="precionar(event)" id="campo5" type="text" name="usuario" value="Descrição">
+
+        </div>
+
+        <!-- Nunca esqueca de linkar o script no HTML -->
+
+        <script>
+            function digitou() {
+                console.log('Você digitou.');
+            }
+
+            function digitando() {
+                console.log('Você digitando!');
+            }
+
+            function digitar(e){
+                console.log(e);
+            }
+
+            function confirmar(e){
+                if(e.keyCode == 13) {   //Enter
+                    let texto = document.getElementById('campo4').value;
+
+                    console.log(texto);
+                }
+            }
+
+            function precionar(e){
+                if(e.keyCode == 13 && e.ctrlkey == true) {   //Enter
+                    let texto = document.getElementById('campo5').value;
+
+                    console.log(texto);
+                }
+            }
+        </script>
+    
+    </section>
+    
+</body>
+</html>

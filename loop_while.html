@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>10 - Loop While</title>
+    </head>
+    <body>
+        <h1 id="titulo">Seja bem vindo(a)</h1>
+        
+        <div id="demostracao"></div>
+        <div id="demo"></div>
+
+        <script>
+            let html = '';
+
+            let c = 1;
+
+            while(c <=10) {
+                html += "Número:"+c+'<br/>';
+                c++;
+            }
+
+            document.getElementById("demostracao").innerHTMl = html;
+
+            for(let c = 1; c <= 10; c++) {
+                html += "Número:"+c+"<br/>";
+            }
+
+            document.getElementById("demo").innerHTMl = html;
+        </script>
+
+    </body>
+</html>

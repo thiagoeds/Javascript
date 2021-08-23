@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 - Variaveis (2/2)</title>
+</head>
+<body>
+    <h1 id="titulo">Olá, Seja bem vindos(as)!</h1>
+
+    <!-- Nunca esqueca de linkar o script no HTML -->
+
+    <script>
+        /* Existe 3 tipos de variaveis, vamos conhecer a principal 
+        delas a seguir:*/
+
+        /* Para se criar uma variavel vamos indicar que a mesma sera
+        variavel com "var, let e const". */
+
+        var nome = "Thiago";
+
+        /* Quando é usado a variavel "var", acontece um processo chamado HOISTING,
+        em que basicamente, esta variavel será enviado para o scopo geral do seu
+        JavaScript.
+
+        Em outras palavras, consigo utilizar a mesma variavel fora da caixa para
+        qual foi definido aquele valor, possibilitando gerar conflito de informação
+        caso seja inserido outra informação identica a outra parte da pagina. */
+
+        let nome = "Thiago";
+
+        /* Em relação a variavel "let", apesar de aplicada, sera possivel 
+        vizualizar a alteração apenas das informações que estiverem dentro da
+        mesma caixa.
+
+        A variavel não pode ser redefinida, caso seja inserido duas variaveis
+        constando 'NOME', a mesma vai retornar erro como variavel INDENTIFIER */
+
+
+        const nome = "Thiago";
+
+        /* Em relação a variavel "CONST", o valor da variavel não podera ser mudado */
+    </script>
+    
+</body>
+</html>

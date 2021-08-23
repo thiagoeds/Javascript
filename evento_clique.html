@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 - Distâncias e scroll suave</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #202020;
+            background: #fff;
+        }
+
+        /* javascript */
+
+        #geral {
+            width: 900px;
+            display: flex;
+            flex-direction: column;
+            margin: 50px auto 0 auto;
+        }
+
+        input {
+            height: 20px;
+        }    
+
+        #exemplo {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            border: 1px solid #ccc;
+        }
+
+        #exemplo2 {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    
+    <section id="geral">
+
+        <h1 id="titulo">Seja bem vindo(a)!</h1>
+
+        <div>
+            
+        <input id="campo" type="text" name="usuario" value="Nome do Usuário">
+
+        <button onclick="clicou()">Clique em mim 1</button>
+
+        <button onclick="inserir()">Clique em mim 2</button>
+
+        <p id="exemplo"></p>
+
+        <button onclick="document.getElementById('exemplo2').innerHTML = 'caixa de texto 2!'">Clique em mim 3</button>
+
+        <p id="exemplo2"></p>
+
+        <button onclick="this.innerHTML='clicou'">Clique em mim 4</button>
+
+        <button onclick="inserir()" onmouseover="console.log('Passou o mouse')">Clique em mim 5</button>
+
+        <button onclick="inserir()" onmouseout="console.log('Tirou o mouse')">Clique em mim 6</button>
+
+        <button onclick="inserir()" onmouseover="console.log('Passou o mouse')">Clique em mim 7</button>
+      
+
+        </div>
+
+        <!-- Nunca esqueca de linkar o script no HTML -->
+
+        <script>
+            function clicou() {
+                alert('Você clicou');
+            }
+
+            function inserir() {
+                document.getElementById('exemplo').innerHTML = 'caixa de texto!';
+            }
+        </script>
+    
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 - Selecionando Class do elemento 1</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #202020;
+            background: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+        /* javascript */
+
+        #exemplo {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .verde {
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .vermelho {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .azul {
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="exemplo">Bonieky.</div>
+
+    <button onclick="verde()">verde</button>
+    <button onclick="vermelho()">vermelho</button>
+    <button onclick="azul()">azul</button>
+
+    <!-- Nunca esqueca de linkar o script no HTML -->
+
+    <script>
+        function verde() {
+            document.querySelector('#exemplo').classList.remove('vermelho');
+            document.querySelector('#exemplo').classList.remove('azul');
+            document.querySelector('#exemplo').classList.add('verde');
+        }
+
+        function vermelho() {
+            document.querySelector('#exemplo').classList.remove('verde');
+            document.querySelector('#exemplo').classList.remove('azul');
+            document.querySelector('#exemplo').classList.add('vermelho');
+        }
+
+        function azul() {
+            document.querySelector('#exemplo').classList.remove('verde');
+            document.querySelector('#exemplo').classList.remove('vermelho');
+            document.querySelector('#exemplo').classList.add('azul');
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 - Selecionando com queryselector</title>
+</head>
+<body>
+    <h1 id="exemplo">Bonieky</h1>
+
+    <div class="lista">
+        Arroz, feijão, Macarrão.
+    </div>
+
+    <div class="lista">
+        Refrigerante, Agua, Leite.
+    </div>
+
+    <button>Algum Botão</button>
+    <input type="text" name="e-mail" placeholder="Digite seu e-mail">
+    <input type="text" name="Telefone" placeholder="Digite seu telefone">
+
+    <!-- Nunca esqueca de linkar o script no HTML -->
+
+    <script>
+        /* Vamos aprender nesta aula um carinha que consegue substituir todos os carinha que aprendemos nas aulas anteriores. */
+
+        /* Ele se chama queryselector. */
+
+        /* Da mesma forma que é usado no CSS para selecionar uma ID, no queryselector vamos utilizar o jogo da velha ou Hashtag '#' para falar com ele.  */
+
+        document.querySelector("#exemplo").innerHTML = 'Titulo de exemplo!';
+
+        /* Com ele podemos falar também com as classes no meu HTML, sendo que este primeiro exemplo vai selecionar a primeira classe com aquele nome */
+
+        document.querySelector(".lista").innerHTML = 'Alguma coisa na primeira lista.'
+
+        /* Para que falar com as outras classes com o mesmo nome é necessario incluir uma informação a mais como a que vamos vêr a seguir: */
+
+        document.querySelectorAll(".lista")[1].innerHTML = 'Alguma coisa na segunda lista.';
+
+        /* Desta forma ele vai retornar uma Array com a identificação das classes encontradas dentro do nosso HTML.
+
+        Deste modo se temos apenas um elemento com o mesmo nome usamos apenas (queryselector) se existe mais de um elemento com o mesmo nome de classe usamos o (queryselectorAll). */
+
+
+        /* Da mesma forma, também podemos falar com a tag, para isso precissamos apenas inserir o nome da tag com a qual desejo falar. */
+
+        document.querySelector("button").innerHTML = 'Alguma coisa';
+
+        document.querySelector("input").innerHTML = 'Algum e-mail';
+
+        document.querySelectorAll("input")[1].innerHTML = 'Algum telefone';
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 - Selecionando Class do elemento 1</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #202020;
+            background: #FFFFFF;
+        }
+
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+        /* javascript */
+
+        #exemplo {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .verde {
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .vermelho {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .azul {
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* tamanhos */
+
+        .tamanho {
+            width: 406px;
+            height: 63px;
+            margin-top: 28px;
+            font-size: 14px;
+            
+        }
+
+        .tabela-selecao ul, li {
+            display: block;
+        }
+
+        .tabela-selecao a {
+            color: #202020;
+        }
+        
+        .tamanho-selecionado {
+            display: flex;
+            width: 402px;
+            height: 18px;
+        }
+        
+        .tamanho-selecao {
+            margin-right: 9px;
+        }
+        
+        .tamanho-escolhido {
+            margin-right: 142px;
+        }
+        
+        .tamanho-escolhido {
+            color: #5f75aa;
+        }
+
+        #tamanho-escolhido {
+
+        }
+
+        .trintaetres {
+
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div id="exemplo">Bonieky.</div>
+
+    <button onclick="verde()">verde</button>
+    <button onclick="vermelho()">vermelho</button>
+    <button onclick="azul()">azul</button>
+
+
+
+    <div class="tamanho">
+        <div class="tamanho-selecionado">
+            <p class="tamanho-selecao">Tamanho:</p>
+            <p id="tamanho-escolhido"></p>
+        </div> 
+    </div>
+    <ul class="tabela-selecao">
+        <li onclick="33('33')"><a href="#tamanho-escolhido">33</a></li>
+        <li onclick="34('34')"><a href="#tamanho-escolhido">34</a></li>
+        <li onclick="35('35')"><a href="#tamanho-escolhido">35</a></li>
+        <li onclick="36('36')"><a href="#tamanho-escolhido">36</a></li>
+        <li onclick="37('37')"><a href="#tamanho-escolhido">37</a></li>
+        <li onclick="38('38')"><a href="#tamanho-escolhido">38</a></li>
+        <li onclick="39('39')"><a href="#tamanho-escolhido">39</a></li>
+        <li onclick="40('40')"><a href="#tamanho-escolhido">40</a></li>
+        <li onclick="41('41')"><a href="#tamanho-escolhido">41</a></li>
+        <li onclick="42('42')"><a href="#tamanho-escolhido">42</a></li>
+    </ul>
+    
+    <!-- Nunca esqueca de linkar o script no HTML -->
+
+    <script>
+        function verde() {
+            document.querySelector('#exemplo').classList.remove('vermelho');
+            document.querySelector('#exemplo').classList.remove('azul');
+            document.querySelector('#exemplo').classList.add('verde');
+        }
+
+        function vermelho() {
+            document.querySelector('#exemplo').classList.remove('verde');
+            document.querySelector('#exemplo').classList.remove('azul');
+            document.querySelector('#exemplo').classList.add('vermelho');
+        }
+
+        function azul() {
+            document.querySelector('#exemplo').classList.remove('verde');
+            document.querySelector('#exemplo').classList.remove('vermelho');
+            document.querySelector('#exemplo').classList.add('azul');
+        }
+
+        function trintaetres() {
+            document.querySelector('#tamanho-escolhido').classList.add('trintaetres');
+            document.querySelectorAll('#tamanho-escolhido').innerHTML = '(33)';
+        }
+
+        function alterar() {
+            document.getElementById()
+        }
+    </script>
+    
+</body>
+</html>

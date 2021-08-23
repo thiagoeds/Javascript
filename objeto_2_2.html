@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 - Objeto 2/2</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #202020;
+            background: #fff;
+        }
+
+        /* javascript */
+
+        #geral {
+            width: 900px;
+            display: flex;
+            flex-direction: column;
+            margin: 50px auto 0 auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <section id="geral">
+
+        <h1 id="titulo">
+            Seja bem vindo(a)!
+        </h1>
+
+        <div>
+            <p>
+                Uma Array é uma listagem de coisas, ou seja, ela esta toda numerada, lembrando que ele se inicia a contagem do numero (0). <br>
+                Outras dicas importantes: <br>
+                Como identificar uma Array, ela vai iniciar com [colchetes] e objetos iniciam com {chaves}.
+            </p>
+
+            <strong>
+                                
+                let carro = { <br>
+                    nome:'Toyota', <br>
+                    modelo:'Corolla', <br>
+                    peso:'1860kg', <br>
+                    ligado:false, <br>
+                    ligar:function(){ <br>
+                       this.ligado = true; <br>
+                        console.log('vruum, vruuuuum!'); <br> <br>
+                        
+                    }, <br> <br>
+                
+                    acelerar:function() { <br>
+                        if(this.ligado == true) { <br>
+                        console.log('Riiiihhhiiisssshhh') <br>
+                        } else { <br>
+                            console.log(this.nome+" "+this.modelo+" não  está ligado!"); <br>
+                        } <br>
+                    } <br>
+                }; <br> <br>
+                
+                console.log( 'Modelo: '+carro.modelo ); <br> <br>
+                
+                carro.ligar(); <br>
+                carro.acelerar();
+
+            </strong>
+        </div>
+
+        <!-- Nunca esqueca de linkar o script no HTML -->
+
+        <script>
+            /* 
+
+            let carro = {
+                nome:'Fiat',
+                modelo:'Uno',
+                peso:'800kg',
+                ligar:function(){
+                    console.log('Ligando o '+this.modelo);
+                    console.log('vruum, vruuuuum!');
+                },
+                acelerar:function() {
+                    console.log('Riiiihhhiiisssshhh')
+                }
+            };
+
+            console.log( 'Modelo: '+carro.modelo );
+
+            carro.ligar();
+            carro.acelerar(); */
+
+            let carro = {
+                nome:'Toyota',
+                modelo:'Corolla',
+                peso:'1860kg',
+                ligado:false,
+                ligar:function(){
+                this.ligado = true;
+                    console.log('vruum, vruuuuum!');
+                    
+                },
+
+                acelerar:function() {
+                    if(this.ligado == true) {
+                    console.log('Riiiihhhiiisssshhh')
+                    } else {
+                        console.log(this.nome+" "+this.modelo+" não está ligado!");
+                    }
+                }
+            };
+
+            console.log( 'Modelo: '+carro.modelo );
+
+            carro.ligar();
+            carro.acelerar();
+        </script>
+    
+    </section>
+    
+</body>
+</html>

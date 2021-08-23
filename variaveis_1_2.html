@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 - Variaveis (1/2)</title>
+</head>
+<body>
+    <h1 id="titulo">Olá, Seja bem vindos(as)!</h1>
+
+    <!-- Nunca esqueca de linkar o script no HTML -->
+
+    <script>
+        
+        /* Existe 3 tipos de variaveis, vamos conhecer a principal 
+        delas a seguir:*/
+
+        /* Para se criar uma variavel vamos indicar que a mesma sera
+        variavel com "var", inserimos o nome da variavel que eu quero
+        exemplo: idade 
+        Com o (=) vamos atribuir um valor a esta variavel.
+
+        Outro detalhe importante, é que toda vez que que eu criar uma
+        variavel que vai me retornar um valor em palavra ou frase, 
+        preciso colocar esta informação dentro de ("aspas"), não importa
+        se é aspas duplas ou comum, póis o Javascript reconhece as duas.
+        */
+        var nome = "Thiago";
+        alert(nome);
+
+        var idade = 28;
+        alert(idade);
+
+        /* Outro exemplo, agora usando opérações matematicas */
+
+        var x = 10;
+        var y = 15;
+
+        var total = x + y;
+
+        alert(total);
+
+        /* Porem é possivel realizar esta mesma operação de outra forma,
+        sem que eu tenha que usar os simbolos de soma, multiplicar, 
+        subtrair ou dividir.*/
+
+        var nome = "Bonieky";  //string
+        var sobrenome = "Lacerda";
+
+        var nomecompleto = nome + sobrenome;  //concatenar
+
+        alert(nomecompleto);
+
+        /* Quando usamos palavras, estamos fazendo uma 
+        (STRING), e Na pratica o que acabamos de fazer foi juntar uma 
+        palavra a outra, sem que ela tenha nenhum espaço. 
+        Para inserir espaço preciso concatenar ele no codigo da variavel
+        como o exemplo a seguir: por meio das aspas e espaço entre elas.
+
+        OBS: Não é necessario o espaço, pode ser inserido tudo junto, 
+        o que vale é a informação que indica que é necessario espaço. */
+
+        var nome = "Bonieky";  //string
+        var sobrenome = "Lacerda";
+
+        var nomecompleto = nome+" "+sobrenome;  //concatenar é "juntar um 
+                                                //item a outro"
+
+        alert(nomecompleto);
+
+        /* Quando trabalhar co variavel nome e numero, ele vai concatenar
+        ou seja, ira juntar nome ou palavra ao numero, exemplo: */
+
+        var nome = "Bonieky";  
+        var idade = "90";
+
+        var total = nome + idade;  
+
+        alert(total);
+
+        /* Se colocarmos um nomero entre "aspas", o mesmo sera lido pelo
+        JavaScript como se fosse uma palavra, porque ao inves de somar os
+        elementos ele vai juntar (concatenar), veja o exemplo: */
+
+        var x = "10";
+        var y = "15";
+
+        var total = x + y;
+
+        alert(total);
+    </script>
+    
+</body>
+</html>

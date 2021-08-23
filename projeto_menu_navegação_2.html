@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>7 - Projeto: Menu de navegação 3</title>
+        <style>
+            body {
+                background:#EEE;
+            }
+            aside {
+                position:fixed;
+                top:0;
+                right:0;
+                z-index:999;
+                display:flex;
+            }
+            #menu-opener {
+                width:40px;
+                height:40px;
+                cursor:pointer;
+                margin-top:10px;
+                margin-right:10px;
+            }
+            #menu-area {
+                width:200px;
+                height:100vh;
+                background:#ccc;
+                overflow-x:hidden;
+                overflow-y:auto;
+                transition: all ease .5s;
+            }
+            #menu-area ul, #menu-area li {
+                padding:0;
+                list-style:none;
+            }
+            #menu-area li {
+                display:block;
+                padding:10px;
+                color:#555;
+                cursor:pointer;
+            }
+
+            #menu-area li:hover {
+                background:#DDD;
+            }
+        </style>
+    
+    </head>
+    <body>
+        <h1 id="titulo">Seja bem vindo(a)</h1>
+        <aside>
+            <div id="menu-opener" onclick="menuToggle()">
+                <img src="./img/menu sandwich.png" width="36">
+            </div>
+            <div id="menu-area">
+                <ul>
+                    <li>Home</li>
+                    <li>Sobre</li>
+                    <li>Contato</li>
+                </ul>
+            </div>
+        </aside>
+
+        <script>
+            function menuToggle() {
+                let menuArea = document.getElementById("menu-area");
+
+                if(menuArea.style.width == '200px'){
+                    menuArea.style.width = '0px';
+                } else {
+                    menuArea.style.width = "200px";
+                }
+            }
+        </script>
+
+    </body>
+</html>

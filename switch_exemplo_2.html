@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>8 - Switch segundo exemplo</title>
+    </head>
+    <body>
+        <h1 id="titulo">Seja bem vindo(a)</h1>
+        
+        <div id="dia"></div>
+
+        <script>
+            let dia = 6;
+            let diaNome = '';
+
+            switch(dia) {
+                case 6:
+                diaNome = 'Final de semana';
+                    break;
+                case 7:
+                diaNome = 'Final de semana';
+                    break; 
+                default:
+                    diaNome = 'Dia de semana';
+                    break;                   
+            }
+
+            document.getElementById('dia').innerHTML = "Hoje é: "+diaNome;
+
+            //ou posso fazer da seguinte forma também!
+
+            switch(dia) {
+                case 6:
+                case 7:    
+                diaNome = 'Final de semana';
+                    break;
+                default:
+                    diaNome = 'Dia de semana';
+                    break;                   
+            }
+        </script>
+
+    </body>
+</html>

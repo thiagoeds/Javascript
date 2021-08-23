@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 - Manipulando Atributos</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #202020;
+            background: #FFFFFF;
+        }
+
+        /* javascript */
+
+        #geral {
+            width: 900px;
+            display: flex;
+            flex-direction: column;
+            margin: 50px auto 0 auto;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        h1::after {
+            margin-top: 70px;
+        }
+
+        .foto {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            flex-direction: row;
+        }
+
+        .foto1 {
+            height: 600px;
+            margin: 10px;
+        }
+
+        .foto2 {
+            height: 600px;
+            margin: 10px;
+        }
+
+        .foto3 {
+            height: 600px;
+            margin: 10px;
+        }
+
+        #exemplo {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .verde {
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .vermelho {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .azul {
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .preto {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <section id="geral">
+
+        <div>
+            <h1 id="titulo">Seja bem vindo(a)!</h1>
+
+            <div class="foto">
+                <img class="foto1" src="./img/cachecou.jpg" data-animal="Cachorrinho Enrolado no Cachecou" alt="cachorrinho enrolado">
+                <!-- <img class="foto2" src="./img/urso.jpg" alt="urso">
+                <img class="foto3" src="./img/cachorrinho.jpg" alt="cachorrinho"> -->
+            </div>
+
+            <button onclick=" trocarimagem('cachorrinho.jpg','Cachorrinho Bonito')">Cachorro 1</button>
+            <button onclick=" trocarimagem('cachecou.jpg','Cachorrinho Enrolado no Cachecou')">Cachorro 2</button>
+            <button onclick=" trocarimagem('urso.jpg','Urso Pardo e filhotes')">Urso</button>
+      
+            <button onclick="pegaranimal()">Qual é o animal?</button>
+
+
+            
+            <p></p>
+            <!-- Nunca esqueca de linkar o script no HTML -->
+        
+            <script>
+                function trocarimagem(filename, animalname) {
+                    document.querySelector('.foto1').setAttribute('src','img/'+filename);
+                    document.querySelector('.foto1').setAttribute('data-animal', animalname);
+                }
+
+                function pegaranimal() {
+                    let animal = document.querySelector('.foto1').getAttribute('data-animal');
+                    alert('O animal é: ' + animal);
+                }
+            </script>
+        </div>
+    
+    </section>
+    
+</body>
+</html>

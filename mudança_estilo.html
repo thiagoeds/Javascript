@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 - Mudança de estilos</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #202020;
+            background: #fff;
+        }
+
+        /* javascript */
+
+        #geral {
+            width: 900px;
+            display: flex;
+            flex-direction: column;
+            margin: 50px auto 0 auto;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            display: none;
+        }
+
+        .verde {
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .vermelho {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .azul {
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <section id="geral">
+
+        <h1 id="titulo">Seja bem vindo(a)!</h1>
+
+        <div>
+            
+        <button onclick="azul()">azul</button>
+        <button onclick="vermelho()">vermelho</button>
+        <button onclick="verde()">verde</button>
+
+
+        </div>
+
+        <!-- Nunca esqueca de linkar o script no HTML -->
+
+        <script>
+            function azul() {
+                limpar();
+                document.getElementById('titulo').classList.add('azul');   
+            }
+
+            function vermelho() {
+                limpar();
+                document.getElementById('titulo').classList.add('vermelho');    
+            }
+
+            function verde(){
+                limpar();
+                document.getElementById('titulo').classList.add('verde');
+            }
+
+            function limpar() {
+                document.getElementById('titulo').classList.remove('azul');
+                document.getElementById('titulo').classList.remove('vermelho');
+                document.getElementById('titulo').classList.remove('verde');
+            }
+        </script>
+    
+    </section>
+    
+</body>
+</html>

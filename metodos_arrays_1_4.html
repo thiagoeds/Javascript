@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>4 - Métodos de Arrays (1/4)</title> 
+        <style>
+            
+            * {
+                max-width: 1200px;
+            }
+
+            body {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                background-color: #29292e;
+                margin-top: 50px;
+            }
+
+            div {
+                margin-bottom: 20px;
+                color: #fefefe;
+            }
+
+            p {
+                width: 660px;
+                margin-bottom: 20px;
+                color: #dbdcdda8;
+            }
+
+            #titulo {
+                margin-bottom: 20px;
+                color: #fefefe;
+            }
+
+            #nome {
+                margin-bottom: 20px;
+                color: #fefefe;
+            }
+
+            .cores-bonitas-para-selecionar {
+                color: #e559f9;    
+                color: #29292e;
+                color: #737380;
+                color: #835AFD;
+                color: #dbdcdd;
+                color: #f4f0ff;
+                color: #fefefe;
+                color: #e2e2e2;
+            }
+
+        </style>   
+    </head>
+
+    <body>
+        <h1 id="titulo">Seja bem vindo(a)</h1>
+        
+        <h3 id="nome">O metodo Arrays</h3>
+        
+        <p>
+            Usando o metodo "toString", ele separa cada palavra separada por virgula, se transforma em uma Array. <br><br>
+            <b>
+                let lista = ['Ovo', 'Farinha', 'Corante', 'Massa']; <br><br>
+
+                let exemplo = lista.toString(); <br><br>
+
+                document.getElementById("exemplo").innerHTML = exemplo;
+            </b>
+        </p>
+
+        <div id="exemplo"></div>
+
+        <p>
+            Usando o metodo "join(" - ")", ele separa cada palavra separada por virgula, se transforma em uma Array. <br><br>
+            <b>
+                let lista1 = ['Ovo', 'Farinha', 'Corante', 'Massa']; <br><br>
+
+                let exemplo2 = lista1.join(" - "); <br><br>
+
+                document.getElementById("exemplo2").innerHTML = exemplo2;
+            </b>
+        </p>
+
+        <div id="exemplo2"></div>
+
+        <p>
+            Usando o metodo "indexOf('Corante')", ele tras a informação da posição do elemento
+            dentro da Array, caso ele não encontre o elemento, ele vai retornar <b>"-1"</b>. <br><br>
+            <b>
+                let lista3 = ['Ovo', 'Farinha', 'Corante', 'Massa']; <br><br>
+
+                let exemplo3 = lista3.indexOf('Corante'); <br><br>
+
+                document.getElementById("exemplo3").innerHTML = exemplo3;
+            </b>
+        </p>
+
+        <div id="exemplo3"></div>
+
+        <p>
+            Usando o metodo "pop", ele simplismente remove o ultimo item dentro da Array. <br><br>
+            <b>
+                let lista4 = ['Ovo', 'Farinha', 'Corante', 'Massa']; <br><br>
+
+                lista4.pop(); <br><br>
+
+                let exemplo4 = lista4; <br><br>
+
+                document.getElementById("exemplo4").innerHTML = exemplo4;
+            </b>
+        </p>
+
+        <div id="exemplo4"></div>
+
+        <p>
+            Usando o metodo "shift", ele simplismente remove o primeiro item dentro da Array. <br><br>
+            <b>
+                let lista5 = ['Ovo', 'Farinha', 'Corante', 'Massa']; <br><br>
+
+                lista5.shift(); <br><br>
+
+                let exemplo5 = lista5; <br><br>
+
+                document.getElementById("exemplo5").innerHTML = exemplo5;
+            </b>
+        </p>
+
+        <div id="exemplo5"></div>
+        
+        <script>
+            let lista = ['Ovo', 'Farinha', 'Corante', 'Massa'];
+
+            let exemplo = lista.toString();
+
+            document.getElementById("exemplo").innerHTML = exemplo;
+
+            /* Exemplo 2 */
+
+            let lista1 = ['Ovo', 'Farinha', 'Corante', 'Massa'];
+
+            let exemplo2 = lista1.join(" - ");
+
+            console.log(exemplo2)
+
+            document.getElementById("exemplo2").innerHTML = exemplo2;
+
+            /* Exemplo 3 */
+
+            let lista3 = ['Ovo', 'Farinha', 'Corante', 'Massa'];
+
+            let exemplo3 = lista3.indexOf('Corante');
+
+            console.log(exemplo3)
+
+            document.getElementById("exemplo3").innerHTML = exemplo3;
+
+            /* Exemplo 4 */
+
+            let lista4 = ['Ovo', 'Farinha', 'Corante', 'Massa'];
+
+            lista4.pop();
+
+            let exemplo4 = lista4;
+
+            console.log(exemplo4)
+
+            document.getElementById("exemplo4").innerHTML = exemplo4;
+
+            /* Exemplo 5 */
+
+            let lista5 = ['Ovo', 'Farinha', 'Corante', 'Massa'];
+
+            lista5.shift();
+
+            let exemplo5 = lista5;
+
+            console.log(exemplo5)
+
+            document.getElementById("exemplo5").innerHTML = exemplo5;
+            
+        </script>
+
+    </body>
+</html>

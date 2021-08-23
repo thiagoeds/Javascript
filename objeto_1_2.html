@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 - Objeto 1/2</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #202020;
+            background: #fff;
+        }
+
+        /* javascript */
+
+        #geral {
+            width: 900px;
+            display: flex;
+            flex-direction: column;
+            margin: 50px auto 0 auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <section id="geral">
+
+        <h1 id="titulo">
+            Seja bem vindo(a)!
+        </h1>
+
+        <div>
+            <p>
+                Uma Array é uma listagem de coisas, ou seja, ela esta toda numerada, lembrando que ele se inicia a contagem do numero (0).
+            </p>
+
+            <strong>
+                                
+                let carro = { <br>
+                    nome:'Fiat', <br>
+                    modelo:'Uno', <br>
+                    peso:'800kg', <br>
+                    ligar:function(){ <br>
+                        console.log('vruum, vruuuuum!') <br>
+                    } <br>
+                } <br> <br>
+
+                console.log( carro['nome'] ); <br>
+                console.log( carro.nome <span>a forma mais usada.</span> ); <br> <br>
+
+                document.getElementById('titulo').style.display = 'block';
+            </strong>
+        </div>
+
+        <!-- Nunca esqueca de linkar o script no HTML -->
+
+        <script>
+            let carro = {
+                nome:'Fiat',
+                modelo:'Uno',
+                peso:'800kg',
+                ligar:function(){
+                    console.log('vruum, vruuuuum!')
+                },
+                acelerar:function() {
+                    console.log('Riiiihhhiiisssshhh')
+                }
+            }
+
+            console.log( carro['nome'] );
+            console.log( carro.nome );
+
+            document.getElementById('titulo').style.display = 'block';
+        </script>
+    
+    </section>
+    
+</body>
+</html>

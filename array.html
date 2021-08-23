@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 - Array</title>
+</head>
+<body>
+    
+    <section id="geral">
+
+        <h1 id="titulo">
+            Seja bem vindo(a)!
+        </h1>
+
+        <p>
+            Existe diferentes formas de se fazer uma Array, as que se segue são mais avançadas:
+        </p>
+
+        <div>
+            
+            <p>
+                Uma unica Array com todas as opções dentro dela e até mesmo a função.
+            </p>
+
+            <p>
+                let carros = ['Palio', 'Uno', 'Corolla', 'Ferrari', function() { <br>
+                console.log('testando 1, 2, 3...') <br>
+                }]
+            </p>
+
+            <p>
+                Dando o seguinte comando <b>(carros)</b> no console, vai retornar a seguinte informação:
+            </p>
+
+            <strong>
+                (5) ["Palio", "Uno", "Corolla", "Ferrari", ƒ] <br>
+                0: "Palio" <br>
+                1: "Uno" <br>
+                2: "Corolla" <br>
+                3: "Ferrari" <br>
+                4: ƒ () <br>
+                length: 5 <br>
+                __proto__: Array(0)
+            </strong>
+    
+        </div>
+
+        <div>
+            
+            <p>
+                Array dentro de Array.
+            </p>
+
+            <p>
+                let ingredientes = [ <br>
+                    ['Uva', 'Pera', 'Maça'], <br>
+                    ['Arroz', 'Macarrão', 'Feijão'] <br>
+                ]
+            </p>
+
+            <p>
+                Dando o seguinte comando <b>(console.log(ingredientes);)</b> no console, vai retornar a seguinte informação:
+            </p>
+
+            <strong>
+                (2) [Array(3), Array(3)]0: Array(3) <br> 
+                0: "Uva" <br>
+                1: "Pera" <br>
+                2: "Maça" <br>
+                length: 3 <br>
+                __proto__: Array(0) <br>
+                1: Array(3) <br>
+                0: "Arroz" <br>
+                1: "Macarrão" <br>
+                2: "Feijão" <br>
+                length: 3 <br>
+                __proto__: Array(0) <br>
+                length: 2 <br>
+                __proto__: Array(0)             
+            </strong>
+            
+        </div>
+
+        <!-- Nunca esqueca de linkar o script no HTML -->
+
+        <script>
+            let carros = ['Palio', 'Uno', 'Corolla', 'Ferrari', function() {
+                console.log('testando 1, 2, 3...')
+            }]
+
+            carros[4]();
+
+            let ingredientes = [
+                ['Uva', 'Pera', 'Maça'],
+                ['Arroz', 'Macarrão', 'Feijão']
+            ]
+
+            console.log(ingredientes);
+        </script>
+    
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 - Tipos de dados</title>
+</head>
+<body>
+    
+    <section id="geral">
+        <h1>Seja bem vindo(a)!</h1>
+    
+        <p>   
+            Para descobrir o que foi digitado no JavaScript, basta digitar no console do navegador a função <strong>"typeof"</strong> e a informação que quer buscar nas variaveis.    
+        </p>
+    
+        <ul>
+            <li>typeof nome; "string"</li>
+            <li>typeof idade; "number"</li>
+            <li>typeof salvo; "boolean"</li>
+            <li>typeof cidade; "undefined"</li>
+        </ul>
+    
+        <br>
+        <p>Também é possivel solicitar que o console me informe qual o tipo de variavel que esta sendo usada em um determinado local, para isso basta inserir a regra no JavaScript e apos vizualizar no console a informação, veja o exemplo:</p>
+    
+        <p>var tipo = typeof idade; <br><br>
+    
+            console.log(tipo);</p>
+      
+        <!-- Nunca esqueca de linkar o script no HTML -->
+    
+        <script>
+            var nome = 'Bonieky';
+            var idade = 90;
+            var salvo = true || false;
+            var cidade;
+
+            var tipo = typeof idade;
+
+            console.log(tipo);
+        </script>
+    
+    </section>
+    
+</body>
+</html>

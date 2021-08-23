@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>1 - Metodo de String 1/3</title>
+    </head>
+    <body>
+        <h1 id="titulo">Seja bem vindo(a)</h1>
+        
+        <p>
+            Nesta aula não vamos manipular os elementos para exibir na tela, mas sim no console, porque são resultados de manipulação de <b>Strings</b>. <br>
+            
+            Então vamos lá! <br><br>
+        </p>
+
+        <p>
+            <b>1º Exemplo:</b>
+
+            Vamos criar uma String <b>let nome = "Bonieky Lacerda Leal";</b> e com o comando <b>console.log( nome.length );</b> vamos visualizar a quantidade de caracteres que tem em toda a frase, neste caso <b>20</b>, pois ele também conta os espaços entre as palavras. <br><br>
+        </p>
+
+        <p>
+            <b>2º Exemplo:</b>
+
+            Usando a mesma String <b>let nome = "Bonieky Lacerda Leal";</b> porém dando agora um comando diferente. 
+            <b>let resultado = nome.indexOf('Lacerda'); <br><br>
+
+                console.log(resultado);</b> <br><br>
+
+            Neste exemplo agora quero saber a partir de qual posição o texto <b>Lacerda</b> inicia com o comando <b>indexOf</b>, caso não encontre a informação que esta procurando, vai retornar -1.   
+
+        </p>
+
+
+        <div></div>
+
+
+        <script>
+            let nome = "Bonieky Lacerda Leal";
+
+            /* 
+            Primeira opção abaixo
+            */
+
+            //console.log( nome.length );
+
+            /* 
+            Segunda opção abaixo
+            */
+
+            let resultado = nome.indexOf('Lacerda');
+
+            console.log(resultado);
+        </script>
+
+    </body>
+</html>

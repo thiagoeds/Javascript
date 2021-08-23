@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 - Distâncias e scroll suave</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #202020;
+            background: #fff;
+        }
+
+        /* javascript */
+
+        #geral {
+            width: 900px;
+            display: flex;
+            flex-direction: column;
+            margin: 50px auto 0 auto;
+        }
+
+        .texto {
+            width: 200px;
+            height: 900px;
+            overflow: auto;
+            background-color: #ccc;    
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        .scrollbutton {
+            width: 40px;
+            height: 40px;
+            border-radius: 15px;
+            background-color: #289BD5;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 999;
+            cursor: pointer;
+            display: none;
+        }
+
+        span {
+            font-weight: normal;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        h1::after {
+            margin-top: 70px;
+        }
+
+        .subirtela {
+            margin-left: 20px;
+        }
+
+        .foto {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            flex-direction: row;
+        }
+
+        .foto1 {
+            height: 600px;
+            margin: 10px;
+        }
+
+        .foto2 {
+            height: 600px;
+            margin: 10px;
+        }
+
+        .foto3 {
+            height: 600px;
+            margin: 10px;
+        }
+
+        #exemplo {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .verde {
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .vermelho {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .azul {
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .preto {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cor aleatorias {
+            color: #E7D857;
+            color: #289BD5;
+            color: #FB77C6;
+        }
+    </style>
+</head>
+<body>
+    
+    <section id="geral">
+
+        <h1 id="titulo">Seja bem vindo(a)!</h1>
+
+        <P>Distâncias e scroll suave.</P>
+
+        <div class="texto">           
+
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem temporibus libero doloremque quos consectetur tenetur modi asperiores possimus distinctio repellendus eaque, molestias ipsum quas voluptate sapiente animi itaque culpa cum.
+                       
+        </div>
+
+        <p>Vamos continuar abordando as ferramentas de dimensões no console.</p>
+
+        <p>Iniamos realizando a busca pelo class que quero saber as informações com a informação a seguir: <b>document.querySelector('.texto')</b>, para descobrir o tamanho do scroll da pagina vou repetir a operação com a barra de scroll ou barra de rolagem no meio ou no fim para saber o valor exato <b>document.querySelector('.texto').scrollTop</b>, no caso o texto acima tem 80px.</p>
+
+        <p>Vamos fazer agora um botão para quando eu queira voltar para o top da pagina, basta que eu clique nele, então vamos?</p>
+
+        <p>Primeiro passo é criar um botão clicavel, apos no javascript inserimos o seguinte codigo:</p>
+
+        <p>O nosso <b>subirtela</b> é a nossa identificação para o <b>onclick</b>.
+        </p>
+        <strong class="subirtela">
+            function subirtela() {  <br>
+                window.scrollTo({       <br>
+                    top: 0,             <br>
+                    behavior: "smooth", <br>
+                });                     <br>
+            }
+        </strong>
+
+        <p>Podemos criar também outra função, desta vez vamos fazer também no javascript, na qual quando estivermos no topo da pagina o botão não ficara visivel e a cada 1 segundo, será realizada uma nova verificação, caso a barra de scroll saia do topo da página o botão vai aparecer novamente, possibilitando assim ser clicado.</p>
+        <p>Existe duas possibilidades de criar esta função, a primeira delas é por tempo, porém esta não é a mais efitiva, pois ele fica executando a função de segundo em segundo, veja no exemplo a seguir:</p>
+
+        <strong>
+            function decidirBotaoScroll() {
+                <br>
+                if(window.scrollY <span>"Y" na frente de scroll, significa o eixo de rolagem, lembrando que também temos o eixo "X"</span> === 0) {
+                    <br>
+                    //ocultar botão 
+                    <br>
+                    document.querySelector('.scrollbutton').style.display = 'none';
+                    <br>
+                }else{
+                    <br>
+                    //mostrar botão
+                    <br>
+                    document.querySelector('.scrollbutton').style.display = '';
+                    <br>
+                }   <br>
+            }       <br><br>            
+            setInterval(decidirBotaoScroll, 1000 <span>1000 representa aqui 1 segundo</span> );
+        </strong>
+
+        <p>Temos também a outra opção, esta mais avançada, porém mais efetiva;
+        Neste exemplo vamos criar um evento que vai monitorar o scroll da tela.</p>
+
+        <strong>window.addEventListener('scroll', decidirBotaoScroll);</strong>
+
+        
+        <div onclick="subirtela()" class="scrollbutton"></div>
+
+        <!-- Nunca esqueca de linkar o script no HTML -->
+
+        <script>
+            function subirtela() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            }
+
+            function decidirBotaoScroll() {
+                if(window.scrollY === 0) {
+                    //ocultar botão
+                    document.querySelector('.scrollbutton').style.display = 'none';
+                }else{
+                    //mostrar botão
+                    document.querySelector('.scrollbutton').style.display = 'block';
+                }
+            }
+
+            window.addEventListener('scroll', decidirBotaoScroll);
+
+            /* setInterval(decidirBotaoScroll, 1000); */
+        </script>
+    
+    </section>
+    
+</body>
+</html>

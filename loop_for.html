@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>9 - Loop For</title>
+    </head>
+    <body>
+        <h1 id="titulo">Seja bem vindo(a)</h1>
+        
+        <div id="demostracao"></div>
+        <div id="demo"></div>
+
+        <script>
+            // FOR LOOP
+
+            let texto = '';
+
+            for(let i = 0; i <= 10; i++) {
+                texto = texto + i + '<br/>';
+            }
+
+            document.getElementById('demostracao').innerHTML = texto;
+
+
+            // FOR LOOP ARRAY
+
+            let carros = ['Ferrari', 'Fusca', 'Palio', 'Carrola', 'Lamborghini'];
+
+            let html = '<ul>';
+
+            for(let i in carros) {
+                html += '<li>'+ carros[i];
+            }
+
+            html += '<ul/>';
+
+            document.getElementById('demo').innerHTML = html;
+        </script>
+
+    </body>
+</html>

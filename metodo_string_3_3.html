@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3 - Metodo de String 3/3 - Substring</title> 
+        <style>            
+            * {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            body {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                background-color: #dbdcdd;
+            }
+
+            #teste {
+                font-style: unset;
+            }
+
+            #exemplo {
+                color: #737380;
+            }
+
+            .cores-bonitas-para-selecionar {
+                color: #e559f9;    
+                color: #29292e;
+                color: #737380;
+                color: #835AFD;
+                color: #dbdcdd;
+                color: #f4f0ff;
+                color: #fefefe;
+                color: #e2e2e2;
+            }
+        </style>   
+    </head>
+
+    <body>
+        <h1 id="titulo">Seja bem vindo(a)</h1>
+        
+        <h3>O metodo Substring</h3>
+
+        <p>
+            Usabndo o metodo <b>"replace"</b>, vamos alterar uma informação por outra: <br><br>
+
+            <strong>
+                let nome = 'Bonieky Lacerda Leal'; <br><br>
+
+                let resultado = nome.replace('Lacerda', 'Silva'); <br><br>
+
+                document.getElementById("exemplo").innerHTML = resultado; <br><br>
+            </strong>
+
+            Veja o exemplo abaixo:
+        </p>
+        
+        <b id="exemplo">""</b> 
+        
+        <p>
+            Temos também uma outra função muito util no javascript, que é a função <b>"trim</b>, basicamente ela tira todos os espaços sem necessidade, suponhamos que tem um formulario a se preechido pelo usuario, e ele inseri espaços a mais.
+        </p>
+
+        <p>
+            let resultado = nome.trim();
+        </p>
+        
+        <p>
+            
+        </p>
+
+        
+        <script>
+            let nome = 'Bonieky Lacerda Leal';
+
+            let resultado = nome.replace('Lacerda', 'Silva');
+
+            document.getElementById("exemplo").innerHTML = resultado;
+        </script>
+
+    </body>
+</html>

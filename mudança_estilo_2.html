@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>3 - Mudança de estilos 2</title>
+</head>
+<body>
+    
+    <section id="geral">
+
+        <h1 id="titulo">Seja bem vindo(a)!</h1>
+
+        <div>
+            
+        <div id="telefone">33998907070</div>
+            
+        <button onclick="mostrarTelefone()">Mostrar Telefone</button>
+    
+        </div>
+
+        <div>
+            
+        <div id="endereco">R. Ali Perto 70</div>
+            
+        <button onclick="mostrarEndereco(this)">Mostrar Endereço
+
+        </div>
+
+        <!-- Nunca esqueca de linkar o script no HTML -->
+
+        <script>
+            function mostrarTelefone() {
+                document.getElementById('telefone').style.display = "block";
+                
+            }
+
+            function mostrarEndereco(elemento) {
+                elemento.style.display = 'none';
+                document.getElementById('endereco').style.display = 'block';
+            }
+        </script>
+    
+    </section>
+    
+</body>
+</html>

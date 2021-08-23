@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 - Selecionando elemento</title>
+</head>
+<body>
+    <h1 id="exemplo">Bonieky</h1>
+
+    <div class="lista">
+        Arroz, feijão, Macarrão.
+    </div>
+
+    <div class="lista">
+        Refrigerante, Agua, Leite.
+    </div>
+
+    <button>Algum Botão</button>
+    <input type="text" name="e-mail" placeholder="Digite seu e-mail">
+    <input type="text" name="Telefone" placeholder="Digite seu telefone">
+
+    <!-- Nunca esqueca de linkar o script no HTML -->
+
+    <script>
+        /* Alterar a partir da "Id" do elemento. */
+
+        document.getElementById('exemplo').innerHTML = 'Item alterado agora';
+
+        /* Nesta aula vamos falar de algumas formas de seleção,
+        sendo que a primeira delas foi vista na aula passada, atravez do "Id", nesta, sobre a "ClassName", ou seja, nome da classe.
+
+        Para  que eu consiga falar com a classe, sera necessario informar ela da mesma forma de fazemos dentro do CSS, porem a diferença esta na forma que vamos selecionar.
+
+        document.getElementsByClassName('nome da classe desejada')[numero da "array" desejada, lembrando que a primeira "array" começa contar a partir do numero zero].innerHTML = "Item alterado!" */
+
+        document.getElementsByClassName('lista')[0].innerHTML = "Item alterado!";
+
+
+        /* Seleciona a partir do nome da tag, em teste usando .innerHTML ou innerText, o resultado foi o mesmo, alterou apenas a parte escrita. */
+
+        document.getElementsByTagName('button')[0].innerHTML = 'acessar';
+        document.getElementsByTagName('button')[0].innerText = 'acessar';
+
+
+        /* E também acessar pelo nome dos campos */
+
+        document.getElementsByName('input')[0].innerText = 'e-mail';
+    </script>
+    
+</body>
+</html>

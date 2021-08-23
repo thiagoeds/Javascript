@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 - Condicionais (2/2)</title>
+</head>
+<body>
+    <h1 id="titulo">Olá, Seja bem vindos(as)!</h1>
+
+    <!-- Nunca esqueca de linkar o script no HTML -->
+
+    <script>
+        var hora = 22;
+
+        if ( hora < 12 ) {
+            console.log('Bom dia!');
+        } else if ( hora < 18 ) {
+            console.log("Boa tarde!");
+        } else if ( hora <= 23 ) {
+            console.log("Boa noite!");
+        }
+
+        /* variante hora = 22hrs
+        SE a variante é menor que 12, diga ("Bom dia"),
+        SE NÃO hora menor que 18 diga ("Boa tarde"),
+        SE NÃO hora igual ou menor que 23 diga ("Boa noite") */
+
+        /* temos outra opção de informar na mesma variante, duas
+        mais de uma constante, no exemplo abaixo, caso a variante 
+        informada seja menor não ira retornar nada  */
+
+
+        var hora = 15;
+
+        if ( hora>= 12 && hora < 18 ) {
+            console.log('Boa Tarde!');
+        }
+    </script>
+    
+</body>
+</html>
